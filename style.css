@@ -1,0 +1,72 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background: #333;
+}
+
+#box {
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    /* margin: 20% 45%; */
+    position: relative;
+    animation: myanimation 4s;
+    animation-iteration-count: 3;
+    animation-delay: 2s;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
+    /*animation: name duration timing-function delay iteration-count direction fill-mode;*/
+}
+
+@keyframes myanimation {
+    0% {
+        background-color: white;
+        transform: translateY(-50px);
+    }
+    25% {
+        background-color: palevioletred;
+        top: 0px;
+        left: 100px;
+        border-radius: 0 50% 0 0;
+    }
+    50% {
+        background-color: rebeccapurple;
+        top: 100px;
+        left: 100px;
+        border-radius: 0 50% 50% 0;
+    }
+    75% {
+        background-color: burlywood;
+        top: 100px;
+        left: 0px;
+        border-radius: 0 0 0 50%;
+    }
+    100% {
+        background-color: white;
+        top: 0px;
+        left: 0px;
+        border-radius: 50% 0 0 0;
+    }
+}
+
+#box1 {
+    background-color: white;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    margin: auto;
+    top: 200px;
+    transition: all;
+    transition-duration: 2s;
+    transition-delay: 1s;
+    transition-timing-function: ease-in-out;
+}
+
+#box1:hover {
+    background: rebeccapurple;
+    border-radius: 50%;
+    transform: rotateY(180deg)
+}
